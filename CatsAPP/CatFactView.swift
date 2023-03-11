@@ -1,0 +1,49 @@
+import SwiftUI
+
+struct CatFactView: View {
+
+    @Binding var catFact: CatFactResponse?
+
+    var body: some View {
+        Button(action: {
+            fetchCatFact()
+        }, label: {
+            Text("Get Cat Fact")
+                .foregroundColor(.white)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 20)
+                .background(Color.blue)
+                .cornerRadius(10)
+        })
+        .buttonStyle(BorderlessButtonStyle())
+        .padding(.bottom, 8)
+    }
+
+    func fetchCatFact() {
+        guard let url = URL(string: "https://catfact.ninja/fact") else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {
+                print("Error fetching cat fact: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            if let factResponse = try? JSONDecoder().decode(CatFactResponse.self, from: data) {
+                DispatchQueue.main.async {
+                    self.catFact = factResponse
+                }
+            }
+        }.resume()
+    }
+}
+
+struct CatFactResponse: Decodable, Identifiable {
+    let id = UUID()
+    let fact: String
+    let length: Int
+}
+
+
+struct CatFactView_Previews: PreviewProvider {
+    static var previews: some View {
+        CatFactView(catFact: .constant(nil))
+    }
+}

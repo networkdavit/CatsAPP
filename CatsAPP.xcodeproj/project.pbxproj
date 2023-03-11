@@ -11,6 +11,15 @@
 		EA698F8629BBDE6C000768E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA698F8529BBDE6C000768E3 /* ContentView.swift */; };
 		EA698F8829BBDE6D000768E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA698F8729BBDE6D000768E3 /* Assets.xcassets */; };
 		EA698F8B29BBDE6D000768E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA698F8A29BBDE6D000768E3 /* Preview Assets.xcassets */; };
+		EA8668FE29BC99970091163B /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8668FD29BC99970091163B /* Breeds.swift */; };
+		EA86690029BC9CF50091163B /* BreedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8668FF29BC9CF50091163B /* BreedRowView.swift */; };
+		EA86690229BC9D7E0091163B /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690129BC9D7E0091163B /* BreedDetailView.swift */; };
+		EA86690429BCA3BC0091163B /* BreedGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690329BCA3BC0091163B /* BreedGridCellView.swift */; };
+		EA86690629BCEE4B0091163B /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690529BCEE4B0091163B /* Advice.swift */; };
+		EA86690829BCEFB80091163B /* AdviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690729BCEFB80091163B /* AdviceListView.swift */; };
+		EA86690A29BCF0750091163B /* AdviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690929BCF0750091163B /* AdviceDetailView.swift */; };
+		EA86690C29BCF41C0091163B /* CatFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690B29BCF41C0091163B /* CatFactView.swift */; };
+		EA86690F29BCFADD0091163B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = EA86690E29BCFADD0091163B /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,14 @@
 		EA698F8529BBDE6C000768E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA698F8729BBDE6D000768E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA698F8A29BBDE6D000768E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA8668FD29BC99970091163B /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
+		EA8668FF29BC9CF50091163B /* BreedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRowView.swift; sourceTree = "<group>"; };
+		EA86690129BC9D7E0091163B /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
+		EA86690329BCA3BC0091163B /* BreedGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGridCellView.swift; sourceTree = "<group>"; };
+		EA86690529BCEE4B0091163B /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		EA86690729BCEFB80091163B /* AdviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceListView.swift; sourceTree = "<group>"; };
+		EA86690929BCF0750091163B /* AdviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDetailView.swift; sourceTree = "<group>"; };
+		EA86690B29BCF41C0091163B /* CatFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA86690F29BCFADD0091163B /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +73,14 @@
 				EA698F8529BBDE6C000768E3 /* ContentView.swift */,
 				EA698F8729BBDE6D000768E3 /* Assets.xcassets */,
 				EA698F8929BBDE6D000768E3 /* Preview Content */,
+				EA8668FD29BC99970091163B /* Breeds.swift */,
+				EA8668FF29BC9CF50091163B /* BreedRowView.swift */,
+				EA86690129BC9D7E0091163B /* BreedDetailView.swift */,
+				EA86690329BCA3BC0091163B /* BreedGridCellView.swift */,
+				EA86690529BCEE4B0091163B /* Advice.swift */,
+				EA86690729BCEFB80091163B /* AdviceListView.swift */,
+				EA86690929BCF0750091163B /* AdviceDetailView.swift */,
+				EA86690B29BCF41C0091163B /* CatFactView.swift */,
 			);
 			path = CatsAPP;
 			sourceTree = "<group>";
@@ -83,6 +109,9 @@
 			dependencies = (
 			);
 			name = CatsAPP;
+			packageProductDependencies = (
+				EA86690E29BCFADD0091163B /* URLImage */,
+			);
 			productName = CatsAPP;
 			productReference = EA698F8029BBDE6C000768E3 /* CatsAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +140,9 @@
 				Base,
 			);
 			mainGroup = EA698F7729BBDE6C000768E3;
+			packageReferences = (
+				EA86690D29BCFADD0091163B /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = EA698F8129BBDE6C000768E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA86690A29BCF0750091163B /* AdviceDetailView.swift in Sources */,
+				EA86690029BC9CF50091163B /* BreedRowView.swift in Sources */,
+				EA86690429BCA3BC0091163B /* BreedGridCellView.swift in Sources */,
+				EA86690829BCEFB80091163B /* AdviceListView.swift in Sources */,
+				EA86690629BCEE4B0091163B /* Advice.swift in Sources */,
+				EA86690C29BCF41C0091163B /* CatFactView.swift in Sources */,
+				EA8668FE29BC99970091163B /* Breeds.swift in Sources */,
+				EA86690229BC9D7E0091163B /* BreedDetailView.swift in Sources */,
 				EA698F8629BBDE6C000768E3 /* ContentView.swift in Sources */,
 				EA698F8429BBDE6C000768E3 /* CatsAPPApp.swift in Sources */,
 			);
@@ -337,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA86690D29BCFADD0091163B /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA86690E29BCFADD0091163B /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA86690D29BCFADD0091163B /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA698F7829BBDE6C000768E3 /* Project object */;
 }
