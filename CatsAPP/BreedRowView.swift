@@ -24,7 +24,7 @@ struct BreedRowView: View {
                 }
             }
             Spacer()
-            if breed.isFavorite {
+            if breed.isFavorite == 1 {
                 Image(systemName: "heart.fill")
                     .foregroundColor(.red)
             }

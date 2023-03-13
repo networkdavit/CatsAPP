@@ -3,12 +3,14 @@ import SwiftUI
 struct CatFactView: View {
 
     @Binding var catFact: CatFactResponse?
+    @State private var isLoading = false
 
     var body: some View {
         Button(action: {
+            isLoading = true
             fetchCatFact()
         }, label: {
-            Text("Get Cat Fact")
+            Text("Get a Random Cat Fact")
                 .foregroundColor(.white)
                 .padding(.vertical, 10)
                 .padding(.horizontal, 20)
@@ -17,11 +19,14 @@ struct CatFactView: View {
         })
         .buttonStyle(BorderlessButtonStyle())
         .padding(.bottom, 8)
+        .disabled(isLoading)
+        .overlay(isLoading ? ProgressView() : nil)
     }
 
     func fetchCatFact() {
         guard let url = URL(string: "https://catfact.ninja/fact") else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
+            isLoading = false
             guard let data = data else {
                 print("Error fetching cat fact: \(error?.localizedDescription ?? "Unknown error")")
                 return
@@ -34,6 +39,7 @@ struct CatFactView: View {
         }.resume()
     }
 }
+
 
 struct CatFactResponse: Decodable, Identifiable {
     let id = UUID()

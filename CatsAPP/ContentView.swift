@@ -9,11 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
 
+
     @ObservedObject var breedStore = BreedStore()
     @ObservedObject var adviceStore = AdviceStore()
 
     @State private var catFact: CatFactResponse? = nil
 
+    init() {
+        breedStore.loadBreeds()
+        adviceStore.loadAdvice()
+    }
+    
     let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
@@ -66,7 +72,7 @@ struct ContentView: View {
             }
         }
         .alert(item: $catFact) { fact in
-            Alert(title: Text("Cat Fact"), message: Text(fact.fact), dismissButton: .default(Text("OK")))
+            Alert(title: Text("Cat Fact"), message: Text(fact.fact), dismissButton: .default(Text("Cool!")))
         }
     }
 
