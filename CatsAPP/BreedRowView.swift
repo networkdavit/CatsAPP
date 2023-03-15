@@ -8,27 +8,20 @@
 import SwiftUI
 
 struct BreedRowView: View {
-    let breed: Breed
+    @ObservedObject var breedStore: BreedStore
+    let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
+
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(breed.title)
-                    .font(.headline)
-                HStack {
-                    Image(systemName: "clock")
-                    Text("\(breed.age) years old")
+        LazyVGrid(columns: gridItems, spacing: 16) {
+            ForEach(breedStore.breeds) { breed in
+                NavigationLink(destination: BreedDetailView(breed: breed)) {
+                    BreedGridCellView(breed: breed)
                 }
-                HStack {
-                    Image(systemName: "globe")
-                    Text(breed.origin)
-                }
-            }
-            Spacer()
-            if breed.isFavorite == 1 {
-                Image(systemName: "heart.fill")
-                    .foregroundColor(.red)
+                .buttonStyle(PlainButtonStyle())
             }
         }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
     }
 }
 

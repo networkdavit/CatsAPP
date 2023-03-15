@@ -11,33 +11,25 @@ struct ContentView: View {
 
 
     @ObservedObject var breedStore = BreedStore()
-    @ObservedObject var adviceStore = AdviceStore()
-
+    @ObservedObject var foodStore = FoodStore()
+    
     @State private var catFact: CatFactResponse? = nil
 
     init() {
         breedStore.loadBreeds()
-        adviceStore.loadAdvice()
+        foodStore.loadFood()
     }
     
     let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
+        
+        //                .frame(height: 300)
         TabView {
             NavigationView {
                 ScrollView {
                     CatFactView(catFact: $catFact)
-                    LazyVGrid(columns: gridItems, spacing: 16) {
-                        ForEach(breedStore.breeds) { breed in
-                            NavigationLink(destination: BreedDetailView(breed: breed)) {
-                                BreedGridCellView(breed: breed)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                        }
-                    }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-
+                    BreedRowView(breedStore: breedStore)
                 }
                 .navigationTitle("Cat Breeds")
             }
@@ -48,27 +40,24 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     CatFactView(catFact: $catFact)
-                    List(adviceStore.advice) { advice in
-                        NavigationLink(destination: AdviceDetailView(advice: advice)) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text(advice.title)
-                                    .font(.headline)
-                                    .foregroundColor(.primary)
-                                    .lineLimit(2)
-                                Text(advice.description)
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                                    .lineLimit(2)
-                            }
-                            .padding(8)
-                        }
-                    }
+                    FoodListView(foodStore: foodStore)
                 }
-                .navigationTitle("Advice for Cat Owners")
-
+                .navigationTitle("Food for your cat")
             }
             .tabItem {
-                Label("Advice", systemImage: "lightbulb")
+                Label("Food", systemImage: "cart.fill")
+            }
+            NavigationView {
+                // Add your view content here
+            }
+            .tabItem {
+                Label("Games", systemImage: "gamecontroller")
+            }
+            NavigationView {
+                // Add your view content here
+            }
+            .tabItem {
+                Label("Quiz", systemImage: "square.stack.3d.up.fill")
             }
         }
         .alert(item: $catFact) { fact in

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA38962529C1981E00D64605 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962429C1981E00D64605 /* Food.swift */; };
+		EA38962729C1989200D64605 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962629C1989200D64605 /* FoodListView.swift */; };
+		EA38962929C1A0C700D64605 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962829C1A0C700D64605 /* FoodDetailView.swift */; };
+		EA38962B29C1AEA800D64605 /* YouTubePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962A29C1AEA800D64605 /* YouTubePlayerView.swift */; };
 		EA698F8429BBDE6C000768E3 /* CatsAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA698F8329BBDE6C000768E3 /* CatsAPPApp.swift */; };
 		EA698F8629BBDE6C000768E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA698F8529BBDE6C000768E3 /* ContentView.swift */; };
 		EA698F8829BBDE6D000768E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA698F8729BBDE6D000768E3 /* Assets.xcassets */; };
@@ -15,14 +19,15 @@
 		EA86690029BC9CF50091163B /* BreedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8668FF29BC9CF50091163B /* BreedRowView.swift */; };
 		EA86690229BC9D7E0091163B /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690129BC9D7E0091163B /* BreedDetailView.swift */; };
 		EA86690429BCA3BC0091163B /* BreedGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690329BCA3BC0091163B /* BreedGridCellView.swift */; };
-		EA86690629BCEE4B0091163B /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690529BCEE4B0091163B /* Advice.swift */; };
-		EA86690829BCEFB80091163B /* AdviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690729BCEFB80091163B /* AdviceListView.swift */; };
-		EA86690A29BCF0750091163B /* AdviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690929BCF0750091163B /* AdviceDetailView.swift */; };
 		EA86690C29BCF41C0091163B /* CatFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86690B29BCF41C0091163B /* CatFactView.swift */; };
 		EA86690F29BCFADD0091163B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = EA86690E29BCFADD0091163B /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA38962429C1981E00D64605 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		EA38962629C1989200D64605 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
+		EA38962829C1A0C700D64605 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
+		EA38962A29C1AEA800D64605 /* YouTubePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayerView.swift; sourceTree = "<group>"; };
 		EA698F8029BBDE6C000768E3 /* CatsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA698F8329BBDE6C000768E3 /* CatsAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAPPApp.swift; sourceTree = "<group>"; };
 		EA698F8529BBDE6C000768E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +37,6 @@
 		EA8668FF29BC9CF50091163B /* BreedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRowView.swift; sourceTree = "<group>"; };
 		EA86690129BC9D7E0091163B /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 		EA86690329BCA3BC0091163B /* BreedGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGridCellView.swift; sourceTree = "<group>"; };
-		EA86690529BCEE4B0091163B /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
-		EA86690729BCEFB80091163B /* AdviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceListView.swift; sourceTree = "<group>"; };
-		EA86690929BCF0750091163B /* AdviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDetailView.swift; sourceTree = "<group>"; };
 		EA86690B29BCF41C0091163B /* CatFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,10 +79,11 @@
 				EA8668FF29BC9CF50091163B /* BreedRowView.swift */,
 				EA86690129BC9D7E0091163B /* BreedDetailView.swift */,
 				EA86690329BCA3BC0091163B /* BreedGridCellView.swift */,
-				EA86690529BCEE4B0091163B /* Advice.swift */,
-				EA86690729BCEFB80091163B /* AdviceListView.swift */,
-				EA86690929BCF0750091163B /* AdviceDetailView.swift */,
 				EA86690B29BCF41C0091163B /* CatFactView.swift */,
+				EA38962429C1981E00D64605 /* Food.swift */,
+				EA38962629C1989200D64605 /* FoodListView.swift */,
+				EA38962829C1A0C700D64605 /* FoodDetailView.swift */,
+				EA38962A29C1AEA800D64605 /* YouTubePlayerView.swift */,
 			);
 			path = CatsAPP;
 			sourceTree = "<group>";
@@ -169,16 +172,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA86690A29BCF0750091163B /* AdviceDetailView.swift in Sources */,
+				EA38962529C1981E00D64605 /* Food.swift in Sources */,
 				EA86690029BC9CF50091163B /* BreedRowView.swift in Sources */,
 				EA86690429BCA3BC0091163B /* BreedGridCellView.swift in Sources */,
-				EA86690829BCEFB80091163B /* AdviceListView.swift in Sources */,
-				EA86690629BCEE4B0091163B /* Advice.swift in Sources */,
 				EA86690C29BCF41C0091163B /* CatFactView.swift in Sources */,
 				EA8668FE29BC99970091163B /* Breeds.swift in Sources */,
 				EA86690229BC9D7E0091163B /* BreedDetailView.swift in Sources */,
 				EA698F8629BBDE6C000768E3 /* ContentView.swift in Sources */,
+				EA38962929C1A0C700D64605 /* FoodDetailView.swift in Sources */,
+				EA38962B29C1AEA800D64605 /* YouTubePlayerView.swift in Sources */,
 				EA698F8429BBDE6C000768E3 /* CatsAPPApp.swift in Sources */,
+				EA38962729C1989200D64605 /* FoodListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,9 +308,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatsAPP/Preview Content\"";
+				DEVELOPMENT_TEAM = Z22YVGMK36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -321,6 +327,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = networkdavit.CatsAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,9 +339,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatsAPP/Preview Content\"";
+				DEVELOPMENT_TEAM = Z22YVGMK36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -349,6 +358,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = networkdavit.CatsAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

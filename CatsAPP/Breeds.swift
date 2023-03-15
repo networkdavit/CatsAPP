@@ -31,15 +31,16 @@ import Foundation
 import URLImage
 
 struct Breed: Identifiable, Decodable {
-  let id: Int
-  let title: String
-  let description: String
-  let age: String
-  let origin: String
-  let isFavorite: Int
-  let pros: String
-  let cons: String
-  let imageURL: URL?
+    let id: Int
+    let title: String
+    let description: String
+    let age: String
+    let origin: String
+    let isFavorite: Int
+    let pros: String
+    let cons: String
+    let imageURL: URL?
+    let advice: String
 }
 
 //class BreedStore: ObservableObject {
@@ -57,6 +58,10 @@ class BreedStore: ObservableObject {
             print("Invalid URL")
             return
         }
+//        guard let url = URL(string: "http://143.42.17.186:3000/api/v1/breeds") else {
+//            print("Invalid URL")
+//            return
+//        }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
@@ -69,6 +74,7 @@ class BreedStore: ObservableObject {
                 DispatchQueue.main.async {
                     self.breeds = decodedResponse
                 }
+                
             } catch let error {
                 print("Error decoding JSON: \(error)")
             }
