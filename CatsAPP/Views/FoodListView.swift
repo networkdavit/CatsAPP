@@ -14,6 +14,7 @@ struct FoodListView: View {
     var body: some View {
         List(foodStore.food) { food in
             NavigationLink(destination: FoodDetailView(food: food)) {
+
                 VStack(alignment: .leading, spacing: 8) {
                     Text(food.brand)
                         .font(.headline)
@@ -23,6 +24,7 @@ struct FoodListView: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .lineLimit(2)
+                    
                 }
             }
         }

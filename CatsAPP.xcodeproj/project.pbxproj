@@ -11,6 +11,10 @@
 		EA38962729C1989200D64605 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962629C1989200D64605 /* FoodListView.swift */; };
 		EA38962929C1A0C700D64605 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962829C1A0C700D64605 /* FoodDetailView.swift */; };
 		EA38962B29C1AEA800D64605 /* YouTubePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962A29C1AEA800D64605 /* YouTubePlayerView.swift */; };
+		EA38962D29C1D23F00D64605 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962C29C1D23F00D64605 /* Games.swift */; };
+		EA38962F29C1D31700D64605 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962E29C1D31700D64605 /* GamesListView.swift */; };
+		EA38963129C1D4B000D64605 /* GamesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38963029C1D4B000D64605 /* GamesDetailView.swift */; };
+		EA38963429C1D7A900D64605 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38963329C1D7A900D64605 /* QuizView.swift */; };
 		EA698F8429BBDE6C000768E3 /* CatsAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA698F8329BBDE6C000768E3 /* CatsAPPApp.swift */; };
 		EA698F8629BBDE6C000768E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA698F8529BBDE6C000768E3 /* ContentView.swift */; };
 		EA698F8829BBDE6D000768E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA698F8729BBDE6D000768E3 /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 		EA38962629C1989200D64605 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		EA38962829C1A0C700D64605 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
 		EA38962A29C1AEA800D64605 /* YouTubePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayerView.swift; sourceTree = "<group>"; };
+		EA38962C29C1D23F00D64605 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		EA38962E29C1D31700D64605 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
+		EA38963029C1D4B000D64605 /* GamesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailView.swift; sourceTree = "<group>"; };
+		EA38963329C1D7A900D64605 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		EA698F8029BBDE6C000768E3 /* CatsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA698F8329BBDE6C000768E3 /* CatsAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAPPApp.swift; sourceTree = "<group>"; };
 		EA698F8529BBDE6C000768E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +60,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA38963229C1D68A00D64605 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA698F8529BBDE6C000768E3 /* ContentView.swift */,
+				EA38962629C1989200D64605 /* FoodListView.swift */,
+				EA38962A29C1AEA800D64605 /* YouTubePlayerView.swift */,
+				EA38962829C1A0C700D64605 /* FoodDetailView.swift */,
+				EA38963029C1D4B000D64605 /* GamesDetailView.swift */,
+				EA86690129BC9D7E0091163B /* BreedDetailView.swift */,
+				EA8668FF29BC9CF50091163B /* BreedRowView.swift */,
+				EA86690329BCA3BC0091163B /* BreedGridCellView.swift */,
+				EA86690B29BCF41C0091163B /* CatFactView.swift */,
+				EA38962E29C1D31700D64605 /* GamesListView.swift */,
+				EA38963329C1D7A900D64605 /* QuizView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EA698F7729BBDE6C000768E3 = {
 			isa = PBXGroup;
 			children = (
@@ -71,19 +97,13 @@
 		EA698F8229BBDE6C000768E3 /* CatsAPP */ = {
 			isa = PBXGroup;
 			children = (
+				EA38963229C1D68A00D64605 /* Views */,
 				EA698F8329BBDE6C000768E3 /* CatsAPPApp.swift */,
-				EA698F8529BBDE6C000768E3 /* ContentView.swift */,
 				EA698F8729BBDE6D000768E3 /* Assets.xcassets */,
 				EA698F8929BBDE6D000768E3 /* Preview Content */,
 				EA8668FD29BC99970091163B /* Breeds.swift */,
-				EA8668FF29BC9CF50091163B /* BreedRowView.swift */,
-				EA86690129BC9D7E0091163B /* BreedDetailView.swift */,
-				EA86690329BCA3BC0091163B /* BreedGridCellView.swift */,
-				EA86690B29BCF41C0091163B /* CatFactView.swift */,
+				EA38962C29C1D23F00D64605 /* Games.swift */,
 				EA38962429C1981E00D64605 /* Food.swift */,
-				EA38962629C1989200D64605 /* FoodListView.swift */,
-				EA38962829C1A0C700D64605 /* FoodDetailView.swift */,
-				EA38962A29C1AEA800D64605 /* YouTubePlayerView.swift */,
 			);
 			path = CatsAPP;
 			sourceTree = "<group>";
@@ -174,13 +194,17 @@
 			files = (
 				EA38962529C1981E00D64605 /* Food.swift in Sources */,
 				EA86690029BC9CF50091163B /* BreedRowView.swift in Sources */,
+				EA38963429C1D7A900D64605 /* QuizView.swift in Sources */,
+				EA38962F29C1D31700D64605 /* GamesListView.swift in Sources */,
 				EA86690429BCA3BC0091163B /* BreedGridCellView.swift in Sources */,
+				EA38962D29C1D23F00D64605 /* Games.swift in Sources */,
 				EA86690C29BCF41C0091163B /* CatFactView.swift in Sources */,
 				EA8668FE29BC99970091163B /* Breeds.swift in Sources */,
 				EA86690229BC9D7E0091163B /* BreedDetailView.swift in Sources */,
 				EA698F8629BBDE6C000768E3 /* ContentView.swift in Sources */,
 				EA38962929C1A0C700D64605 /* FoodDetailView.swift in Sources */,
 				EA38962B29C1AEA800D64605 /* YouTubePlayerView.swift in Sources */,
+				EA38963129C1D4B000D64605 /* GamesDetailView.swift in Sources */,
 				EA698F8429BBDE6C000768E3 /* CatsAPPApp.swift in Sources */,
 				EA38962729C1989200D64605 /* FoodListView.swift in Sources */,
 			);

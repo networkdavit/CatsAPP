@@ -12,12 +12,14 @@ struct ContentView: View {
 
     @ObservedObject var breedStore = BreedStore()
     @ObservedObject var foodStore = FoodStore()
-    
+    @ObservedObject var gamesStore = GamesStore()
+
     @State private var catFact: CatFactResponse? = nil
 
     init() {
         breedStore.loadBreeds()
         foodStore.loadFood()
+        gamesStore.loadGames()
     }
     
     let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
@@ -48,13 +50,17 @@ struct ContentView: View {
                 Label("Food", systemImage: "cart.fill")
             }
             NavigationView {
-                // Add your view content here
+                VStack {
+                    CatFactView(catFact: $catFact)
+                    GamesListView(gamesStore: gamesStore)
+                }
+                .navigationTitle("Interactive games to play")
             }
             .tabItem {
                 Label("Games", systemImage: "gamecontroller")
             }
             NavigationView {
-                // Add your view content here
+                    QuizView()
             }
             .tabItem {
                 Label("Quiz", systemImage: "square.stack.3d.up.fill")
