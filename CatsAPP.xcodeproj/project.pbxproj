@@ -15,6 +15,7 @@
 		EA38962F29C1D31700D64605 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38962E29C1D31700D64605 /* GamesListView.swift */; };
 		EA38963129C1D4B000D64605 /* GamesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38963029C1D4B000D64605 /* GamesDetailView.swift */; };
 		EA38963429C1D7A900D64605 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38963329C1D7A900D64605 /* QuizView.swift */; };
+		EA38963629C2D6C900D64605 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38963529C2D6C900D64605 /* Questions.swift */; };
 		EA698F8429BBDE6C000768E3 /* CatsAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA698F8329BBDE6C000768E3 /* CatsAPPApp.swift */; };
 		EA698F8629BBDE6C000768E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA698F8529BBDE6C000768E3 /* ContentView.swift */; };
 		EA698F8829BBDE6D000768E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA698F8729BBDE6D000768E3 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		EA38962E29C1D31700D64605 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
 		EA38963029C1D4B000D64605 /* GamesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailView.swift; sourceTree = "<group>"; };
 		EA38963329C1D7A900D64605 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		EA38963529C2D6C900D64605 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		EA698F8029BBDE6C000768E3 /* CatsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA698F8329BBDE6C000768E3 /* CatsAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAPPApp.swift; sourceTree = "<group>"; };
 		EA698F8529BBDE6C000768E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				EA8668FD29BC99970091163B /* Breeds.swift */,
 				EA38962C29C1D23F00D64605 /* Games.swift */,
 				EA38962429C1981E00D64605 /* Food.swift */,
+				EA38963529C2D6C900D64605 /* Questions.swift */,
 			);
 			path = CatsAPP;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				EA38963429C1D7A900D64605 /* QuizView.swift in Sources */,
 				EA38962F29C1D31700D64605 /* GamesListView.swift in Sources */,
 				EA86690429BCA3BC0091163B /* BreedGridCellView.swift in Sources */,
+				EA38963629C2D6C900D64605 /* Questions.swift in Sources */,
 				EA38962D29C1D23F00D64605 /* Games.swift in Sources */,
 				EA86690C29BCF41C0091163B /* CatFactView.swift in Sources */,
 				EA8668FE29BC99970091163B /* Breeds.swift in Sources */,

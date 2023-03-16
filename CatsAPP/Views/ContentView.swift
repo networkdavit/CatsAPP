@@ -13,13 +13,15 @@ struct ContentView: View {
     @ObservedObject var breedStore = BreedStore()
     @ObservedObject var foodStore = FoodStore()
     @ObservedObject var gamesStore = GamesStore()
-
+    @ObservedObject var questionStore = QuestionStore()
+    
     @State private var catFact: CatFactResponse? = nil
 
     init() {
         breedStore.loadBreeds()
         foodStore.loadFood()
         gamesStore.loadGames()
+        questionStore.loadQuestions()
     }
     
     let gridItems = [GridItem(.flexible()), GridItem(.flexible())]

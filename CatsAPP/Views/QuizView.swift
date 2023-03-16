@@ -14,12 +14,7 @@ struct Question {
 }
 
 struct QuizView: View {
-    let questions: [Question] = [
-        Question(text: "What is the capital of France?", answers: ["Paris", "London", "Berlin"]),
-        Question(text: "What is the largest planet in our solar system?", answers: ["Jupiter", "Saturn", "Mars"]),
-        Question(text: "What is the tallest mountain in the world?", answers: ["Mount Everest", "K2", "Makalu"])
-    ]
-    
+    @ObservedObject var questionStore = QuestionStore()
     @State private var selectedAnswers = Array(repeating: -1, count: 3)
     @State private var currentQuestion = 0
     @State private var showResults = false
@@ -27,23 +22,30 @@ struct QuizView: View {
     var body: some View {
         VStack {
             if !showResults {
-                QuestionView(question: questions[currentQuestion], selectedAnswer: $selectedAnswers[currentQuestion]) {
-                    self.nextQuestion()
+                if questionStore.questions.count > currentQuestion {
+                    QuestionView(question: questionStore.questions[currentQuestion], selectedAnswer: $selectedAnswers[currentQuestion]) {
+                        self.nextQuestion()
+                    }
+                } else {
+                    Text("Loading...")
+                        .font(.title)
+                        .padding()
                 }
             } else {
-                ResultView(answers: selectedAnswers.map { index in
-                    index == -1 ? "Not answered" : questions[currentQuestion].answers[index]
-                }, restartAction: {
+                ResultView(questionStore: questionStore, selectedAnswers: selectedAnswers, restartAction: {
                     self.selectedAnswers = Array(repeating: -1, count: 3)
                     self.currentQuestion = 0
                     self.showResults = false
                 })
             }
         }
+        .onAppear {
+            self.questionStore.loadQuestions()
+        }
     }
     
     private func nextQuestion() {
-        if currentQuestion < questions.count - 1 {
+        if currentQuestion < questionStore.questions.count - 1 {
             currentQuestion += 1
         } else {
             showResults = true
@@ -52,13 +54,19 @@ struct QuizView: View {
 }
 
 struct QuestionView: View {
-    let question: Question
+    let question: Questions
     @Binding var selectedAnswer: Int
     let answerAction: () -> Void
     
     var body: some View {
         VStack {
-           
+            URLImage(URL(string: question.imageURL)!) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 200)
+            }
+            .padding()
             
             Text(question.text)
                 .font(.title)
@@ -81,9 +89,18 @@ struct QuestionView: View {
     }
 }
 
+
 struct ResultView: View {
-    let answers: [String]
+    let questionStore: QuestionStore
+    let selectedAnswers: [Int]
     let restartAction: () -> Void
+    var results: String {
+            var string = ""
+            for index in selectedAnswers.indices {
+                string.append("\(selectedAnswers[index])")
+            }
+            return string
+        }
     
     var body: some View {
         VStack {
@@ -91,17 +108,26 @@ struct ResultView: View {
                 .font(.largeTitle)
                 .padding()
             
-            ForEach(0..<answers.count) { index in
+            ForEach(0..<selectedAnswers.count) { index in
+                let question = questionStore.questions[index]
+                let selectedAnswerIndex = selectedAnswers[index]
+                
                 HStack {
                     Text("Question \(index+1):")
                         .font(.headline)
                         .padding()
                     
-                    Text(answers[index])
-                        .padding()
+                    if selectedAnswerIndex >= 0 {
+                        Text(question.answers[selectedAnswerIndex])
+                            .padding()
+                    } else {
+                        Text("Not answered")
+                            .padding()
+                    }
                     
                     Spacer()
                 }
+                
             }
             
             Spacer()
@@ -118,8 +144,21 @@ struct ResultView: View {
             }
             .padding()
         }
+        Button(action: {
+            getResult()
+                }) {
+                    Text("Get the Result")
+                }
     }
+    
+    func getResult(){
+        let alert = UIAlertController(title: "Alert", message: "\(results)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+    
 }
+
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
