@@ -8,10 +8,6 @@
 import SwiftUI
 import URLImage
 
-struct Question {
-    let text: String
-    let answers: [String]
-}
 
 struct QuizView: View {
     @ObservedObject var questionStore = QuestionStore()
@@ -102,6 +98,8 @@ struct ResultView: View {
             return string
         }
     
+    @State private var message: String = ""
+    
     var body: some View {
         VStack {
             Text("Quiz Results")
@@ -131,7 +129,7 @@ struct ResultView: View {
             }
             
             Spacer()
-            
+            Text(message)
             Button(action: {
                 self.restartAction()
             }) {
@@ -144,19 +142,43 @@ struct ResultView: View {
             }
             .padding()
         }
-        Button(action: {
+        .onAppear {
             getResult()
-                }) {
-                    Text("Get the Result")
-                }
+        }
+
     }
     
-    func getResult(){
-        let alert = UIAlertController(title: "Alert", message: "\(results)", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+    func getResult() {
+        let urlString = "http://localhost:3000/api/v1/questions/result?answer_id=\(results)"
+        print(urlString, "URL STRING")
+        guard let url = URL(string: urlString) else {
+            print("Error: cannot create URL")
+            return
+        }
+
+        let session = URLSession.shared
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+            if error != nil || data == nil {
+                print("Error: No data was retrieved from the URL")
+                return
+            }
+
+            do {
+                print(String(data: data!, encoding: .utf8))
+
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(Result.self, from: data!)
+                let message = result.result
+                self.message = result.result
+
+            } catch {
+                print("Error decoding JSON: \(error.localizedDescription)")
+                return
+            }
+        })
+
+        task.resume()
     }
-    
 }
 
 

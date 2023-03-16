@@ -14,6 +14,18 @@ struct Questions: Identifiable, Decodable {
     let answers: [String]
 }
 
+struct Question {
+    let text: String
+    let answers: [String]
+}
+
+struct Result: Decodable {
+    let id: Int
+    let answer_pattern: String
+    let result: String
+    let imageURL: String
+}
+
 class QuestionStore: ObservableObject{
     @Published var questions = [Questions]()
     
