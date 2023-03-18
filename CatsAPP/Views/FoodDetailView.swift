@@ -36,9 +36,8 @@ struct FoodDetailView: View {
             Text(food.cat_type)
                 .font(.headline)
                 .foregroundColor(.secondary)
-            Text(food.reason)
-                .font(.headline)
-                .foregroundColor(.accentColor)
+            Link("Visit \(food.brand) websitee", destination: URL(string: food.website)!)
+
             Spacer()
         }
         .padding()

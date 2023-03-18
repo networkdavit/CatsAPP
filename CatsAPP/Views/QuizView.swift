@@ -129,7 +129,10 @@ struct ResultView: View {
             }
             
             Spacer()
-            Text(message)
+            Text("Your result is: \(message)")
+                .font(.headline)
+                .padding()
+                .background(Color.green)
             Button(action: {
                 self.restartAction()
             }) {

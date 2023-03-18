@@ -63,6 +63,7 @@ struct ContentView: View {
             }
             NavigationView {
                     QuizView()
+                .navigationTitle("Which cat is the best for you?")
             }
             .tabItem {
                 Label("Quiz", systemImage: "square.stack.3d.up.fill")

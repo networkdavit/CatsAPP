@@ -12,12 +12,18 @@ struct GamesDetailView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            YouTubePlayerView(videoID: games.video_id)
-                .frame(height: 300)
+//            YouTubePlayerView(videoID: games.video_id)
+//                .frame(height: 300)
             Text(games.title)
                 .font(.title)
                 .foregroundColor(.primary)
             Text(games.description)
+                .font(.headline)
+                .foregroundColor(.secondary)
+            Text(games.difficulty)
+                .font(.headline)
+                .foregroundColor(.secondary)
+            Text(games.age_range)
                 .font(.headline)
                 .foregroundColor(.secondary)
             Spacer()

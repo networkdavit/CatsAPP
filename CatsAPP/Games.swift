@@ -4,8 +4,9 @@ import URLImage
 struct Games: Identifiable, Decodable {
     let id: Int
     let title: String
-    let video_id: String
     let description: String
+    let difficulty: String
+    let age_range: String
 }
 
 

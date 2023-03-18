@@ -5,8 +5,8 @@ struct Food: Identifiable, Decodable {
     let id: Int
     let brand: String
     let cat_type: String
-    let reason: String
     let imageURL: URL?
+    let website: String
 }
 
 
